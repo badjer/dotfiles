@@ -29,3 +29,7 @@ set gfn=Consolas:h9:cANSI
 set bs=2
 " I have no idea what this does
 set autochdir
+" Allow you to switch buffers without vim warning you to save it first
+" I know I didn't save it! I'm not closing it, just looking at another file for 3 freaking seconds!
+" Leave me alone!
+set hidden
