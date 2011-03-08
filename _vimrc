@@ -1,3 +1,6 @@
+" Set the scrolling so that if you're X lines from the bottom/top off the screen, it will scroll
+" That way, you can always see X-1 lines above/below your cursor
+set scrolloff=5
 " Show matching brackets when you cursor over them
 set showmatch 
 " Do indenting sensibly - following 4 settings
