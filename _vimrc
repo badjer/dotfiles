@@ -36,3 +36,5 @@ set autochdir
 " I know I didn't save it! I'm not closing it, just looking at another file for 3 freaking seconds!
 " Leave me alone!
 set hidden
+let @p = "|w\"ayww\"bywww\"cy$Oi		privatea \"api a_\"bpi;opublic \"api \"bpi{	get{	if(_\"bpi == null)	_\"bpi = \"cpo€kbreturn _\"bpi;€kb}€kb}jdd"
+let @l = "|w\"ayww\"bywww\"cy$Oi		privatea IEnumerable<\"api> a_\"bpi;opublic IEnumerable<\"api> \"bpi{	get{	if(_\"bpi == null)	_\"bpi = \"cpo€kbreturn _\"bpi;€kb}€kb}jdd"
