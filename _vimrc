@@ -36,3 +36,31 @@ set autochdir
 " I know I didn't save it! I'm not closing it, just looking at another file for 3 freaking seconds!
 " Leave me alone!
 set hidden
+" C# macro, bound to the p register.
+" Turns this:
+" string myStr = "abc";
+" into this:
+" private string _myStr;
+" public string myStr
+" {
+"	get{
+"		if(_myStr == null)
+"			_myStr = "abc";
+"		return _myStr;
+"	}
+"}
+let @p = "|w\"ayww\"bywww\"cy$Oi		privatea \"api a_\"bpi;opublic \"api \"bpi{	get{	if(_\"bpi == null)	_\"bpi = \"cpo€kbreturn _\"bpi;€kb}€kb}jdd"
+" C# macro, bound to the l register.
+" Turns this:
+" string myStr = "abc";
+" into this:
+" private IEnumerable<string> _myStr;
+" public IEnumerable<string> myStr
+" {
+"	get{
+"		if(_myStr == null)
+"			_myStr = "abc";
+"		return _myStr;
+"	}
+"}
+let @l = "|w\"ayww\"bywww\"cy$Oi		privatea IEnumerable<\"api> a_\"bpi;opublic IEnumerable<\"api> \"bpi{	get{	if(_\"bpi == null)	_\"bpi = \"cpo€kbreturn _\"bpi;€kb}€kb}jdd"
