@@ -1,7 +1,8 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-PATH=$PATH:/var/lib/gems/1.8/bin
+PATH=$PATH:/var/lib/gems/1.8/bin:~/gae/google_appengine
+EDITOR=gvim
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -82,6 +83,14 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+
+# aliases for not having gvim throw tons of crappy messages on the screen
+# this is only relevant for Ubuntu Karmic Koala. See the ugly details here:
+# https://bugs.launchpad.net/ubuntu/+source/vim/+bug/402188
+alias gvim="gvim -reverse 2>/dev/null"
+alias tvim="gvim --servername localhost --remote-silent-tab 2>/dev/null"
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
