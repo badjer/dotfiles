@@ -7,6 +7,8 @@ set tabstop=2
 set smarttab
 " Enable syntax highlighing
 syntax on
+" Enable filetype
+filetype plugin indent on
 " Use a nice colorscheme
 colorscheme slate
 " When using folds, base them on indentation
