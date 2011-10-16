@@ -9,6 +9,10 @@ set smarttab
 syntax on
 " Enable filetype
 filetype plugin indent on
+
+" Associate clojurescript (.cljs) files with the clojure syntax highlighting
+au BufNewFile,BufRead *.cljs set filetype=clojure
+
 " Use a nice colorscheme
 colorscheme slate
 " When using folds, base them on indentation
