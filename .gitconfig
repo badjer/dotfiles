@@ -1,0 +1,5 @@
+[user]
+	name = badjer
+	email = brian.dejong@gmail.com
+[merge]
+	tool = gvimdiff
