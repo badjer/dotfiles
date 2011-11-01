@@ -1,3 +1,5 @@
+source ~/.profile
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -15,4 +17,4 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-source ~/.profile
+alias v="gvim -f"
