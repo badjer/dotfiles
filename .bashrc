@@ -17,4 +17,4 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-alias v="gvim -f"
+alias v="gvim"
