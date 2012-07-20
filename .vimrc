@@ -1,3 +1,9 @@
+" If we're on windows, set the runtime to the same locations as we'd have on
+" *nix
+if has('win32') || has('win64')
+  set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+
 " Show matching brackets when you cursor over them
 set showmatch 
 " Do indenting sensibly - following 4 settings
@@ -5,6 +11,9 @@ set autoindent
 set shiftwidth=2
 set tabstop=2
 set smarttab
+" Set the scrolling so that if you're X lines from the bottom/top off the screen, it will scroll
+" That way, you can always see X-1 lines above/below your cursor
+set scrolloff=5
 " Enable syntax highlighing
 syntax on
 " Enable filetype
@@ -30,7 +39,12 @@ set lines=62
 " Open at 207 columns wide
 set columns=118
 " Use a nice font
-set gfn=DejaVu\ Sans\ Mono\ 9
+" But use the right one on the right platform
+if has("win32") || has("win64")
+	set gfn=Consolas:h9:cANSI
+else
+	set gfn=DejaVu\ Sans\ Mono\ 9
+endif
 " I have no idea what this does
 set bs=2
 " I have no idea what this does
