@@ -53,3 +53,6 @@ set autochdir
 " I know I didn't save it! I'm not closing it, just looking at another file for 3 freaking seconds!
 " Leave me alone!
 set hidden
+" Set settings for vimclojure
+let vimclojure#FuzzyIndentPatterns .= ",testing"
+let vimclojure#FuzzyIndent = 1
