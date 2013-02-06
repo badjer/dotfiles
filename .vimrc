@@ -23,9 +23,9 @@ syntax on
 filetype plugin indent on
 
 " Associate clojurescript (.cljs) files with the clojure syntax highlighting
-"au BufNewFile,BufRead *.cljs set filetype=clojure
+au BufNewFile,BufRead *.cljs set filetype=clojure
 " And cross-platform clojure files
-"au BufNewFile,BufRead *.cljx set filetype=clojure
+au BufNewFile,BufRead *.cljx set filetype=clojure
 
 " Use a nice colorscheme
 colorscheme slate
@@ -40,9 +40,9 @@ set number
 " Map F5 key to toggle search result highlighting
 map <F5> :set hls!<bar>set hls?<CR>
 " Open at 79 lines tall
-set lines=62
+set lines=50
 " Open at 207 columns wide
-set columns=118
+set columns=176
 " Use a nice font
 " But use the right one on the right platform
 if has("win32") || has("win64")
