@@ -46,7 +46,7 @@ set columns=176
 " Use a nice font
 " But use the right one on the right platform
 if has("win32") || has("win64")
-	set gfn=Consolas:h9:cANSI
+	set gfn=Consolas:h11:cANSI
 else
 	set gfn=Menlo\ Regular:h13
 endif
