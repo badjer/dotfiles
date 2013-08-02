@@ -3,3 +3,5 @@
 	email = brian.dejong@gmail.com
 [merge]
 	tool = gvimdiff
+[push]
+	default = simple
