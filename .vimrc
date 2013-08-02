@@ -59,5 +59,4 @@ set autochdir
 " Leave me alone!
 set hidden
 " Set settings for vimclojure
-"let vimclojure#FuzzyIndentPatterns .= ",testing,fact,facts,in-.*"
-"let vimclojure#FuzzyIndent = 1
+let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^fact']
