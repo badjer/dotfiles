@@ -4,6 +4,8 @@ if has('win32') || has('win64')
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 
+set expandtab
+
 " Load pathogen to automatically load plugins from ~/.vim/bundles
 execute pathogen#infect()
 
@@ -46,7 +48,7 @@ set columns=176
 " Use a nice font
 " But use the right one on the right platform
 if has("win32") || has("win64")
-	set gfn=Consolas:h11:cANSI
+	set gfn=Consolas:h9:cANSI
 else
 	set gfn=Menlo\ Regular:h13
 endif
@@ -58,5 +60,10 @@ set autochdir
 " I know I didn't save it! I'm not closing it, just looking at another file for 3 freaking seconds!
 " Leave me alone!
 set hidden
+" Turn off the beeping!
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
 " Set settings for vimclojure
 let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^fact']
