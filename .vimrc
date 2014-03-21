@@ -41,10 +41,10 @@ set nofoldenable
 set number
 " Map F5 key to toggle search result highlighting
 map <F5> :set hls!<bar>set hls?<CR>
-" Open at 79 lines tall
+" Open at X columns wide
+set columns=100
+" Open at Y lines tall
 set lines=50
-" Open at 207 columns wide
-set columns=176
 " Use a nice font
 " But use the right one on the right platform
 if has("win32") || has("win64")
