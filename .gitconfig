@@ -7,3 +7,7 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore_global
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
