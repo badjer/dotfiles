@@ -16,6 +16,8 @@ set autoindent
 set shiftwidth=2
 set tabstop=2
 set smarttab
+" Set vimdiff to ignore whitespace
+set diffopt+=iwhite
 " Set the scrolling so that if you're X lines from the bottom/top off the screen, it will scroll
 " That way, you can always see X-1 lines above/below your cursor
 set scrolloff=5
