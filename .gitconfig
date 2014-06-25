@@ -2,12 +2,13 @@
 	name = badjer
 	email = brian.dejong@gmail.com
 [merge]
-	tool = gvimdiff
+	tool = kdiff3
 [push]
 	default = simple
 [core]
 	excludesfile = ~/.gitignore_global
 [diff]
-	tool = vimdiff
+	tool = kdiff3
+  guitool = kdiff3
 [difftool]
 	prompt = false
