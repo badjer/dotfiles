@@ -10,6 +10,7 @@
 " These are the plugins I have installed:
 "   https://github.com/leafgarland/typescript-vim 
 "   https://github.com/tpope/vim-sensible.git
+"   https://github.com/nikvdp/ejs-syntax
 
 set expandtab
 
