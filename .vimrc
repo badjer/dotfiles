@@ -1,13 +1,17 @@
-" If we're on windows, set the runtime to the same locations as we'd have on
-" *nix   WHY WOULD YOU EVER MAKE THIS DIFFERENT!!!?!?!?!?!?
-if has('win32') || has('win64')
-  set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-endif
+" Installing plugins
+" With Vim8, there's now a built-in plugin manager, so we don't have to mess
+" around with Pathogen, VAM, Vundle, etc, etc, etc....
+" Instead, just do the following:
+"   mkdir -p ~/.vim/pack/bundle/start
+"   cd ~/.vim/pack/bundle/start
+"   git clone https://github.com/tpope/vim-sensible.git
+" On Windows, use the path ~/vimfiles/pack instead of ~/.vim/pack
+"
+" These are the plugins I have installed:
+"   https://github.com/leafgarland/typescript-vim 
+"   https://github.com/tpope/vim-sensible.git
 
 set expandtab
-
-" Load pathogen to automatically load plugins from ~/.vim/bundles
-execute pathogen#infect()
 
 " Show matching brackets when you cursor over them
 set showmatch 
@@ -41,6 +45,8 @@ set foldcolumn=4
 set nofoldenable
 " Turn on line numbers
 set number
+" Turn on column indicator
+set ruler
 " Map F5 key to toggle search result highlighting
 map <F5> :set hls!<bar>set hls?<CR>
 " Open at X columns wide
@@ -50,7 +56,7 @@ set lines=50
 " Use a nice font
 " But use the right one on the right platform
 if has("win32") || has("win64")
-	set gfn=Consolas:h9:cANSI
+	set gfn=Consolas:h12:cANSI
 else
 	set gfn=Menlo\ Regular:h13
 endif
