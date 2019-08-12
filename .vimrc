@@ -2,7 +2,7 @@
 " With Vim8, there's now a built-in plugin manager, so we don't have to mess
 " around with Pathogen, VAM, Vundle, etc, etc, etc....
 " Instead, just do the following:
-"   mkdir -p ~/.vim/pack/bundle/start
+"   mkdir -p ~/.vim/pack/bundle/start # ~/vimfiles/pack/bundle/start on WIN
 "   cd ~/.vim/pack/bundle/start
 "   git clone https://github.com/tpope/vim-sensible.git
 " On Windows, use the path ~/vimfiles/pack instead of ~/.vim/pack
@@ -11,8 +11,12 @@
 "   https://github.com/leafgarland/typescript-vim 
 "   https://github.com/tpope/vim-sensible.git
 "   https://github.com/nikvdp/ejs-syntax
+"   https://github.com/posva/vim-vue.git
 
 set expandtab
+
+" Turn on search highlighting by default
+set hlsearch
 
 " Show matching brackets when you cursor over them
 set showmatch 
@@ -51,7 +55,7 @@ set ruler
 " Map F5 key to toggle search result highlighting
 map <F5> :set hls!<bar>set hls?<CR>
 " Open at X columns wide
-set columns=100
+set columns=80
 " Open at Y lines tall
 set lines=50
 " Use a nice font
@@ -73,6 +77,11 @@ set hidden
 set noerrorbells visualbell t_vb=
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
+  " Fix for syntax highlighting randomly disappearing when editing
+  " Typescript or Vue files
+  " https://vim.fandom.com/wiki/Fix_syntax_highlighting 
+  autocmd BufEnter * :syntax sync fromstart
 endif
 " Set settings for vimclojure
 let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^fact']
+
