@@ -81,7 +81,9 @@ if has('autocmd')
   " Typescript or Vue files
   " https://vim.fandom.com/wiki/Fix_syntax_highlighting 
   autocmd BufEnter * :syntax sync fromstart
+
+  " C# - set tabs to 4 spaces
+  autocmd FileType cs setlocal tabstop=4 shiftwidth=4
 endif
 " Set settings for vimclojure
 let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^fact']
-
